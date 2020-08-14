@@ -1,0 +1,43 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .5);
+}
+
+.modal-container__delete {
+  position: relative;
+  width: 350px;
+  background: #fff;
+  padding: 1rem;
+}
+
+.btn-close {
+  position: absolute;
+  right: 1rem;
+  font-size: 1rem;
+  background: #ff9800;
+  border: 1px solid #000;
+  border-radius: 3px;
+  outline: none;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.modal-container__delete-body,
+.modal-container-delete-options {
+  margin-top: 20px;
+}
+
+.modal-container-delete-options {
+  display: flex;
+}
+
+.modal-container-delete-options > button:last-child {
+  margin-left: .6rem
+}

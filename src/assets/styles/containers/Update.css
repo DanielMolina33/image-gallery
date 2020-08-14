@@ -1,0 +1,31 @@
+.update-container__title {
+  background: #ff6d00;
+  text-align: center;
+  width: 100%;
+  padding: .3rem;
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+
+.update-container__controls {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 1.2rem 1.2rem;
+}
+
+.update-container__controls > button {
+  margin: 1rem 0 .6rem 0;
+}
+
+.update-container__image-preview {
+  margin-top: 1.2rem;
+  height: 150px;
+  overflow: hidden;
+}
+
+.update-container__image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left;
+}

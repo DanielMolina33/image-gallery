@@ -1,0 +1,42 @@
+.upload {
+  display: flex;
+  justify-content: flex-end;
+  margin: 3rem 1.2rem 1.2rem;
+}
+
+.upload .button {
+  width: fit-content;
+}
+
+.list {
+  margin: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 200px;
+  gap: 1rem;
+}
+
+.list-nothing-yet {
+  font-size: 1.5rem;
+  grid-column: span 2;
+}
+
+.list-item {
+  border: 1px solid #000;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.list-item__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 768px) {
+  .list {
+    width: 85%;
+    margin: 1.2rem auto;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

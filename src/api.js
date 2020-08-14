@@ -1,1 +1,1 @@
-export const API = 'http://192.168.0.5:3000';
+export const API = 'https://backend-image-gallery.herokuapp.com';

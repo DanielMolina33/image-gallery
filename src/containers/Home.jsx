@@ -34,6 +34,7 @@ const Home = () => {
   }, []);
 
   const handleLoadImage = e => {
+    debugger;
     setState({...state, imageLoaded: 'HOLA A TODOS'});
   }
 

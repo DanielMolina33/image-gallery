@@ -34,16 +34,16 @@ const Home = () => {
   }, []);
 
   const handleLoadImage = e => {
-    setState({...state, i: true});
+    setState({...state, i: true, error: 'Hola'});
   }
 
   if(state.loading === true){
     return <Loader isContainer/>
   }
 
-  if(state.error){
-    return <Error/>
-  }
+  // if(state.error){
+  //   return <Error/>
+  // }
 
   return (
     <>

@@ -7,6 +7,8 @@ import Loader from '../components/Loader';
 import Error from '../components/Error';
 import Footer from '../components/Footer';
 
+import Logs from '../components/Logs';
+
 const Home = () => {
   const [state, setState] = useState({
     loading: true,
@@ -67,6 +69,7 @@ const Home = () => {
             })
         }
       </ul>
+      <Logs logs={state} id="1"/>
       <Footer/>
     </>
   );

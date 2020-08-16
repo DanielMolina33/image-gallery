@@ -11,10 +11,10 @@ import Logs from '../components/Logs';
 
 const Home = () => {
   const [state, setState] = useState({
+    imageLoaded: false,
     loading: true,
     data: undefined,
-    error: null,
-    imageLoaded: false
+    error: null
   });
 
   const fetchData = () => {
@@ -34,8 +34,7 @@ const Home = () => {
   }, []);
 
   const handleLoadImage = e => {
-    debugger;
-    setState({...state, imageLoaded: 'HOLA A TODOS'});
+    setState({...state, imageLoaded: true});
   }
 
   if(state.loading === true){
@@ -62,7 +61,7 @@ const Home = () => {
                 <li key={index} className="list-item">
                   <Link to={`/details/${item.public_id.split('/')[1]}`}>
                     {
-                      !state.imageLoaded && <Loader isImage/>
+                      state.imageLoaded === false && <Loader isImage/>
                     }
                     <img src={item.url} onLoad={handleLoadImage} alt="Image" className="list-item__img"/>
                   </Link>

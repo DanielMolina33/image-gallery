@@ -34,7 +34,7 @@ const Home = () => {
   }, []);
 
   const handleLoadImage = e => {
-    setState({...state, imageLoaded: true});
+    setState({...state, imageLoaded: 'HOLA A TODOS'});
   }
 
   if(state.loading === true){

@@ -69,7 +69,13 @@ const Home = () => {
             })
         }
       </ul>
-      <Logs logs={state} id="1"/>
+      <Logs
+        loading={state.loading}
+        data={state.data.message}
+        error={state.error}
+        imageLoaded={state.imageLoaded}
+        id="1"
+      />
       <Footer/>
     </>
   );

@@ -1,13 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const Logs = ({logs, id}) => {
-  // const values = Object.entries(logs);
+const Logs = ({loading, data, error, imageLoaded, id}) => {
+  const template = `
+    state {
+      loading: ${loading}
+      data: ${data}
+      error: ${error}
+      imageLoaded: ${imageLoaded}
+    }
+  `
 
   return ReactDOM.createPortal(
     <>
       <h2>logs {id}</h2>
-      <p>{JSON.stringify(logs)}</p>
+      <code>
+        <pre>
+          {template}
+        </pre>
+      </code>
     </>,
     document.querySelector('#logs')
   );

@@ -13,7 +13,8 @@ const Home = () => {
   const [state, setState] = useState({
     loading: true,
     data: undefined,
-    error: null
+    error: null,
+    imageLoaded: false
   });
 
   const fetchData = () => {

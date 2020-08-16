@@ -35,6 +35,7 @@ const Home = () => {
 
   const handleLoadImage = () => {
     setState({...state, i: true});
+    alert('Hola');
   }
 
   if(state.loading === true){

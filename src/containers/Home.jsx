@@ -11,21 +11,21 @@ import Logs from '../components/Logs';
 
 const Home = () => {
   const [state, setState] = useState({
-    i: false,
     loading: true,
     data: undefined,
-    error: null
+    error: null,
+    i: false
   });
 
   const fetchData = () => {
-    setState({loading: true, error: null})
+    setState({...state, loading: true, error: null})
     fetch(`${API}/get-images`)
       .then(response => response.json())
       .then(response => {
-        setState({loading: false, data: response});
+        setState({...state, loading: false, data: response});
       })
       .catch(error => {
-        setState({loading: false, error: error})
+        setState({...state, loading: false, error: error})
       });
   }
 
@@ -33,17 +33,17 @@ const Home = () => {
     fetchData();
   }, []);
 
-  const handleLoadImage = e => {
-    setState({...state, i: true, error: 'Hola'});
+  const handleLoadImage = () => {
+    setState({...state, i: true});
   }
 
   if(state.loading === true){
     return <Loader isContainer/>
   }
 
-  // if(state.error){
-  //   return <Error/>
-  // }
+  if(state.error){
+    return <Error/>
+  }
 
   return (
     <>
